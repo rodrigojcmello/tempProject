@@ -1,0 +1,130 @@
+{
+    "name": "harpia-studio",
+    "version": "0.0.1",
+    "description": "",
+    "author": "Rodrigo José Carvalho de Mello",
+    "license": "ISC",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --env.NODE_ENV=development --env.DEBUG=false",
+        "start:prod": "webpack-dev-server --env.NODE_ENV=production",
+        "build": "webpack-cli --env.NODE_ENV=production",
+        "build:dev": "webpack-cli --env.NODE_ENV=development"
+    },
+    "dependencies": {
+        "@aspnet/signalr": "^1.0.4",
+        "file-saver": "^2.0.0-rc.4",
+        "history": "latest",
+        "imask": "^4.1.1",
+        "immutability-helper": "^2.8.1",
+        "jquery": "^3.3.1",
+        "lightbox-react": "^0.3.7",
+        "lodash": "latest",
+        "match-sorter": "^2.3.0",
+        "moment": "^2.22.2",
+        "ms-signalr-client": "^2.2.7",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
+        "react-imask": "^4.1.1",
+        "react-redux": "^5.1.0",
+        "react-router-dom": "^4.3.1",
+        "react-select": "^2.1.1",
+        "react-table": "^6.8.6",
+        "redux": "^4.0.1",
+        "store": "^2.0.12",
+        "sweetalert": "^2.1.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.6",
+        "@babel/plugin-proposal-class-properties": "^7.1.0",
+        "@babel/plugin-transform-react-inline-elements": "^7.0.0",
+        "@babel/plugin-transform-runtime": "^7.1.0",
+        "@babel/preset-env": "^7.1.6",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/runtime": "^7.1.5",
+        "autoprefixer": "^9.3.1",
+        "babel-eslint": "^10.0.1",
+        "babel-loader": "^8.0.4",
+        "babel-plugin-transform-remove-console": "^6.9.1",
+        "clean-webpack-plugin": "^1.0.0",
+        "cross-env": "^5.2.0",
+        "css-loader": "^1.0.1",
+        "eslint": "^5.9.0",
+        "eslint-plugin-react": "^7.11.1",
+        "file-loader": "^2.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "postcss-loader": "^3.0.0",
+        "precss": "^3.1.2",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.26.0",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.10",
+        "webpack-notifier": "^1.7.0"
+    },
+    "eslintConfig": {
+        "extends": [
+            "eslint:recommended",
+            "plugin:react/recommended"
+        ],
+        "parserOptions": {
+            "ecmaVersion": 6,
+            "sourceType": "module",
+            "ecmaFeatures": {
+                "jsx": true,
+                "experimentalObjectRestSpread": true
+            }
+        },
+        "env": {
+            "browser": true,
+            "es6": true,
+            "node": true
+        },
+        "parser": "babel-eslint",
+        "plugins": [
+            "react"
+        ],
+        "rules": {
+            "quotes": [
+                "warn",
+                "single"
+            ],
+            "jsx-quotes": [
+                "warn",
+                "prefer-single"
+            ],
+            "semi": [
+                "warn",
+                "always",
+                {
+                    "omitLastInOneLineBlock": true
+                }
+            ],
+            "no-var": "error",
+            "no-console": "off",
+            "no-unused-vars": "off",
+            "no-case-declarations": "off",
+            "react/prop-types": "off",
+            "react/jsx-no-undef": [
+                "error",
+                {
+                    "allowGlobals": true
+                }
+            ],
+            "react/no-unescaped-entities": "off"
+        },
+        "globals": {
+            "$": true,
+            "DEBUG": true
+        }
+    },
+    "stylelint": {
+        "rules": {
+            "unit-no-unknown": true,
+            "selector-type-no-unknown": true,
+            "no-invalid-double-slash-comments": true,
+            "no-duplicate-selectors": true,
+            "no-descending-specificity": true,
+            "unit-case": "lower"
+        }
+    }
+}
